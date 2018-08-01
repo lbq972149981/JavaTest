@@ -1,6 +1,6 @@
 package staticT;
 public class Test {
-   Person person = new Person("Test");
+   Person person = new Person("JDKProxyTest");
    static{
       System.out.println("test static");
    }
