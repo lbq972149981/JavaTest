@@ -11,6 +11,7 @@ import java.lang.reflect.Proxy;
  */
 public class JDKProxyTest {
    public static void main(String[] args) {
+      System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
       final DogService dog = new DogServiceImpl();
       DogService dogProxy = null;
       dogProxy=(DogService) Proxy.newProxyInstance(JDKProxyTest.class.getClassLoader(), dog.getClass().getInterfaces(),
@@ -26,4 +27,5 @@ public class JDKProxyTest {
       });
       dogProxy.eat();
    }
+
 }

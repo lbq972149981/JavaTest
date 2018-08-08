@@ -8,7 +8,6 @@ package StringTest;
 public class Stringreverse {
    public static void main(String[] args) {
       System.out.println(reverse("ABCD"));
-      System.out.println("ABCD".substring(1));
    }
    public static String reverse(String originStr){
       if(originStr==null||originStr.length()<=1)
